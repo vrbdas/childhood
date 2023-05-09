@@ -18,4 +18,22 @@ function childhood_scripts() {
 add_theme_support( 'custom-logo' ); // добавляет поддержку кастомного логотипа
 
 add_theme_support( 'post-thumbnails' ); // добавляет поддержку превью у постов
+
+add_theme_support( 'menus' ); // добавляет поддержку меню
+
+add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 3);
+
+
+// https://wp-kama.ru/hook/nav_menu_link_attributes
+function filter_nav_menu_link_attributes($atts, $item, $args) {
+    if ($args->menu === 'Main') {  // если название меню 'Main'
+        $atts['class'] = 'header__nav-item'; // $atts это атрибуты <a> элемента меню, назначить им класс
+
+        if ($item->current) { // для активной страницы
+            $atts['class'] = 'header__nav-item header__nav-item-active';
+        }
+    };
+
+    return $atts;
+}
 ?>
