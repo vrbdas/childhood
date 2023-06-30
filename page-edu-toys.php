@@ -1,37 +1,28 @@
 <?php
-
-get_header();
-
+/*
+Template Name: Развивающие игрушки
+*/
 ?>
 
-	<main id="primary" class="site-main">
+<?php
+    get_header(); // вставляет сюда содержимое файла header.php
+?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			get_template_part( 'template-parts/content', get_post_type() );
-
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-	<div class="container toys">
-        <h2 class="subtitle">Возможно, вам понравится</h2>
-
+<div class="toys">
+    <div class="container">
+        <h2 class="subtitle">Развивающие игрушки</h2>
         <div class="toys__wrapper">
 
             <?php                
                 // параметры по умолчанию
-                $my_posts = get_posts([
-                    'numberposts' => 3,
-                    'category_name'    => 'soft_toys',
+                $my_posts = get_posts( array(
+                    'numberposts' => -1,
+                    'category_name'    => 'edu_toys',
                     'orderby'     => 'date',
                     'order'       => 'ASC',
                     'post_type'   => 'post',
                     'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-                ]);
+                ) );
 
                 global $post;
 
@@ -51,27 +42,24 @@ get_header();
                 <div class="toys__item-info">
                     <div class="toys__item-title"><?php the_title(); ?></div>
                     <div class="toys__item-descr">
-                       <?php the_field('toys_descr'); ?>                           
+                        <?php the_field('toys_descr'); ?>                          
                     </div>
                     <a href="<?php echo get_permalink(); ?>" class="minibutton toys__trigger">Подробнее</a>
                 </div>
             </div>
+
             <?php
                 }
                 
                 wp_reset_postdata(); // сброс
             ?>
+
         </div>
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-                <div class="toys__alert">
-                    <span><?php the_field('toys_alert_span', 168); ?></span> <?php the_field('toys_alert', 168); ?>
-                </div>
-            </div>
-        </div>    
     </div>
+</div>
 
 
 <?php
+    get_footer(); // вставляет сюда содержимое файла footer.php
+?>
 
-get_footer();

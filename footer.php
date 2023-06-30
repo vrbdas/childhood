@@ -33,9 +33,9 @@
                             <div class="footer__social-item">
                                 Мы в соцсетях:
                             </div>
-                            <a href="<?php the_field('social_link_1', 2); ?>" class="footer__social-item">
+                            <a target="_blank" href="<?php the_field('social_link_1', 2); ?>" class="footer__social-item">
                               <?php 
-                                $image = get_field('social_icon_1');
+                                $image = get_field('social_icon_1', 2);
                                 if (!empty($image)): ?>
                                     <img 
                                     src="<?php echo $image['url']; ?>"
@@ -43,9 +43,9 @@
                                 <?php endif;
                               ?>
                             </a>
-                            <a href="<?php the_field('social_link_2', 2); ?>" class="footer__social-item">
+                            <a target="_blank" href="<?php the_field('social_link_2', 2); ?>" class="footer__social-item">
                               <?php 
-                                  $image = get_field('social_icon_2');
+                                  $image = get_field('social_icon_2', 2);
                                   if (!empty($image)): ?>
                                       <img 
                                       src="<?php echo $image['url']; ?>"
@@ -53,9 +53,9 @@
                                   <?php endif;
                                 ?>
                             </a>
-                            <a href="<?php the_field('social_link_3', 2); ?>" class="footer__social-item">
+                            <a target="_blank" href="<?php the_field('social_link_3', 2); ?>" class="footer__social-item">
                               <?php 
-                                  $image = get_field('social_icon_3');
+                                  $image = get_field('social_icon_3', 2);
                                   if (!empty($image)): ?>
                                       <img 
                                       src="<?php echo $image['url']; ?>"

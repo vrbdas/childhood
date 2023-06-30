@@ -128,7 +128,7 @@ Template Name: Контакты и отзывы
                     </div>
                     <div class="contacts__mail">
                         Или напишите нам на почту
-                        <a href="mailto:<?php the_field('mail', 2); ?>"><?php the_field('mail', 2); ?></a>
+                        <a target="_blank" href="mailto:<?php the_field('mail', 2); ?>"><?php the_field('mail', 2); ?></a>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,8 @@
     get_header(); // вставляет сюда содержимое файла header.php
 ?>
 
+
+
 <div class="mainslider glide">
     <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
@@ -105,6 +107,5 @@
 
 <?php
     get_footer(); // вставляет сюда содержимое файла footer.php
+
 ?>
-
-

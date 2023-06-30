@@ -32,6 +32,11 @@ function filter_nav_menu_link_attributes($atts, $item, $args) {
         if ($item->current) { // для активной страницы
             $atts['class'] = 'header__nav-item header__nav-item-active';
         }
+
+        //print_r($item); // вывести все ссылки и найти там второе id, это будет ссылка на страницу игрушки
+        if ($item->ID === 169 && (in_category('soft_toys') || in_category('edu_toys'))) {
+            $atts['class'] = 'header__nav-item header__nav-item-active';
+        }
     };
 
     return $atts;

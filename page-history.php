@@ -1,11 +1,11 @@
-<?php
+<?php 
 /*
 Template Name: Наша история
 */
 ?>
 
-<?php
-    get_header(); // вставляет сюда содержимое файла header.php
+<?php 
+    get_header();
 ?>
 
 <div class="aboutus">
@@ -14,27 +14,27 @@ Template Name: Наша история
         <div class="row">
             <div class="col-lg-6">
                 <div class="subtitle">
-                    <?php the_field('aboutus_subtitle_1'); ?>
+                    <?php the_field('history_subtitle_1'); ?>
                 </div>
                 <div class="aboutus__text">
-                    <?php the_field('aboutus_text_1'); ?>
+                    <?php the_field('history_story_1'); ?>
                 </div>
             </div>
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_1.jpg" alt="мир детства">
+                <img class="aboutus__img" src="<?php the_field('history_img_1'); ?>" alt="мир детства">
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_2.jpg" alt="мир детства">
+                <img class="aboutus__img" src="<?php the_field('history_img_2'); ?>" alt="мир детства">
             </div>
             <div class="col-lg-6">
                 <div class="subtitle">
-                    <?php the_field('aboutus_subtitle_2'); ?>
+                    <?php the_field('history_subtitle_2'); ?>
                 </div>
                 <div class="aboutus__text">
-                    <?php the_field('aboutus_text_2'); ?>
+                    <?php the_field('history_story_2'); ?>
                 </div>
             </div>
         </div>
@@ -42,20 +42,19 @@ Template Name: Наша история
         <div class="row">
             <div class="col-lg-6">
                 <div class="subtitle">
-                    <?php the_field('aboutus_subtitle_3'); ?>
+                    <?php the_field('history_subtitle_3'); ?>
                 </div>
                 <div class="aboutus__text">
-                    <?php the_field('aboutus_text_3'); ?>
+                    <?php the_field('history_story_3'); ?>
                 </div>
             </div>
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_3.jpg" alt="мир детства">
+                <img class="aboutus__img" src="<?php the_field('history_img_3'); ?>" alt="мир детства">
             </div>
         </div>
     </div>
 </div>
 
-
-<?php
-    get_footer(); // вставляет сюда содержимое файла footer.php
+<?php 
+    get_footer();
 ?>

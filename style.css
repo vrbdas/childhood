@@ -21,3 +21,17 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}details,main{display:block}h
 .sp__content-wrapper {
     margin-top: 30px;
 }
+
+.forty-four {
+    padding: 200px 0 ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.forty-four__link {
+    color: #000;
+    text-decoration: none;
+}
